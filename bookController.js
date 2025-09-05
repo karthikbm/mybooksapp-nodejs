@@ -12,31 +12,31 @@ router.get('/', (req, res) => {
 
 
 
-// // GET /api/books/{id}
-// router.get('/:id', (req, res) => {
-//     setTimeout(() => {
-//         const book = bookService.getBookById(parseInt(req.params.id));
-//         if (book) {
-//             res.json(book);
-//         } else {
-//             res.status(404).send('Book not found');
-//         }
-//     }, 3000); // 300 secs
-// });
-
-
-
-// GET /api/books/{publicationYear}
-router.get('/:publicationYear', (req, res) => {
+// GET /api/books/{id}
+router.get('/:id', (req, res) => {
     setTimeout(() => {
-        const book = bookService.getBookByPublicationYear(parseInt(req.params.publicationYear));
+        const book = bookService.getBookById(parseInt(req.params.publicationYear));
         if (book) {
             res.json(book);
         } else {
-            res.status(405).send('Book not found');
+            res.status(404).send('Book not found');
         }
     }, 3000); // 300 secs
 });
+
+
+
+// // GET /api/books/{publicationYear}
+// router.get('/:publicationYear', (req, res) => {
+//     setTimeout(() => {
+//         const book = bookService.getBookByPublicationYear(parseInt(req.params.publicationYear));
+//         if (book) {
+//             res.json(book);
+//         } else {
+//             res.status(405).send('Book not found');
+//         }
+//     }, 3000); // 300 secs
+// });
 
 
 
