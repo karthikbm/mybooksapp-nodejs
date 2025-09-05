@@ -5,9 +5,9 @@ class BookService {
         return bookRepository.findAll();
     }
 
-    // getBookById(id) {
-    //     return bookRepository.findById(id);
-    // }
+    getBookById(id) {
+        return bookRepository.findById(id);
+    }
 
     getBookByPublicationYear(publicationYear) {
         return bookRepository.findById(publicationYear);
