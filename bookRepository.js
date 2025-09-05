@@ -17,8 +17,13 @@ class BookRepository {
         return this.books;
     }
 
-    findById(id) {
-        const book = this.books.find(b => b.id === id);
+    // findById(id) {
+    //     const book = this.books.find(b => b.id === id);
+    //     return book ? book : null;
+    // }
+
+    findById(publicationYear) {
+        const book = this.books.find(b => b.publicationYear === publicationYear);
         return book ? book : null;
     }
 
