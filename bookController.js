@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     setTimeout(() => {
         const books = bookService.getAllBooks();
         res.json(books);
-    }, 180000); // 180 secs
+    }, 300000); // 300 secs
 });
 
 // GET /api/books/{id}
@@ -19,7 +19,7 @@ router.get('/:id', (req, res) => {
         } else {
             res.status(404).send('Book not found');
         }
-    }, 180000); // 180 secs
+    }, 300000); // 300 secs
 });
 
 // POST /api/books
@@ -27,7 +27,7 @@ router.post('/', (req, res) => {
     setTimeout(() => {
         const newBook = bookService.createBook(req.body);
         res.status(201).json(newBook);
-    }, 180000); // 180 secs
+    }, 300000); // 300 secs
 });
 
 // PUT /api/books/{id}
@@ -39,7 +39,7 @@ router.put('/:id', (req, res) => {
         } else {
             res.status(404).send('Book not found');
         }
-    }, 180000); // 180 secs
+    }, 300000); // 300 secs
 });
 
 // DELETE /api/books/{id}
@@ -51,7 +51,7 @@ router.delete('/:id', (req, res) => {
         } else {
             res.status(404).send('Book not found');
         }
-    }, 180000); // 180 secs
+    }, 300000); // 300 secs
 });
 
 module.exports = router;
