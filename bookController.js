@@ -13,9 +13,9 @@ router.get('/', (req, res) => {
 
 
 // GET /api/books/{id}
-router.get('/:id', (req, res) => {
+router.get('/:idbook', (req, res) => {
     setTimeout(() => {
-        const book = bookService.getBookById(parseInt(req.params.publicationYear));
+        const book = bookService.getBookById(parseInt(req.params.idbook));
         if (book) {
             res.json(book);
         } else {
